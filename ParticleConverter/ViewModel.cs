@@ -25,7 +25,7 @@ namespace ParticleConverter
             lineBuilderX.AddLine(new Vector3(0, 0, 0), new Vector3(1, 0, 0));
             AxisX = lineBuilderX.ToLineGeometry3D();
 
-            LineBuilder lineBuilderY = new Lineuilder();
+            LineBuilder lineBuilderY = new LineBuilder();
             lineBuilderY.AddLine(new Vector3(0, 0, 0), new Vector3(0, 1, 0));
             AxisY = lineBuilderY.ToLineGeometry3D();
 
