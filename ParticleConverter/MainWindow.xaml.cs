@@ -643,7 +643,12 @@ namespace ParticleConverter
                             if (UseStaticDustColor.IsChecked.Value)
                             {
                                 Color color = (Color)ColorConverter.ConvertFromString(ColorCodeBox.Text);
+
+
                                 particle += $"\{color:["{Math.Round(color.R / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(color.G / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(color.B / 255.0d, 2).ToString("R", format)}"f],scale:"{double.Parse(ParticleSizeBox.Text).ToString("R", format)}"f}";
+
+
+                                
                             }
                             else
                             {
