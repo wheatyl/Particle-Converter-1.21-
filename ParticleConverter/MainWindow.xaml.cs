@@ -643,16 +643,11 @@ namespace ParticleConverter
                             if (UseStaticDustColor.IsChecked.Value)
                             {
                                 Color color = (Color)ColorConverter.ConvertFromString(ColorCodeBox.Text);
-
-
-                                particle += $"\{color:["{Math.Round(color.R / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(color.G / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(color.B / 255.0d, 2).ToString("R", format)}"f],scale:"{double.Parse(ParticleSizeBox.Text).ToString("R", format)}"f}";
-
-
-                                
+                                particle += $"\{color:[" + {Math.Round(color.R / 255.0d, 2).ToString("R", format)} + "f, " + {Math.Round(color.G / 255.0d, 2).ToString("R", format)} + "f, " + {Math.Round(color.B / 255.0d, 2).ToString("R", format)} + "f],scale:" + {double.Parse(ParticleSizeBox.Text).ToString("R", format)} + "f}";
                             }
                             else
                             {
-                                particle += $"\{color:["{Math.Round(p.r / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(p.g / 255.0d, 2).ToString("R", format)}"f, "{Math.Round(p.b / 255.0d, 2).ToString("R", format)}"f],scale:"{double.Parse(ParticleSizeBox.Text).ToString("R", format)}"f}";
+                                particle += $"\{color:[" + {Math.Round(p.r / 255.0d, 2).ToString("R", format)} + "f, " + {Math.Round(p.g / 255.0d, 2).ToString("R", format)} + "f, " + {Math.Round(p.b / 255.0d, 2).ToString("R", format)} + "f],scale:" + {double.Parse(ParticleSizeBox.Text).ToString("R", format)} + "f}";
                             }
                         }
                         string particleString = $"particle {particle} {axis} 0 0 0 0 1 {((ComboBoxItem)DisplayModeBox.SelectedItem).Tag} {ParticleViewerBox.Text}";
